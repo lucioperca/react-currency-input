@@ -229,6 +229,7 @@ class CurrencyInput extends Component {
      */
     handleFocus(event) {
         if (!this.theInput) return;
+        console.log('focused event', event);
 
         //Whenever we receive focus check to see if the position is before the suffix, if not, move it.
         let selectionEnd = this.theInput.value.length - this.props.suffix.length;
@@ -252,6 +253,7 @@ class CurrencyInput extends Component {
      * @see https://facebook.github.io/react/docs/component-specs.html#render
      */
     render() {
+      console.log('test');
         return (
             <input
                 ref={(input) => { this.theInput = input; }}
